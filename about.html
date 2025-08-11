@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me – Sarah Theriot</title>
+  <title>About – Sarah Theriot</title>
   <style>
-    /* Reset some default styles */
+    /* Reset and box-sizing */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -60,41 +60,53 @@
       text-align: center;
       font-weight: 700;
       font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-      color: #34495e;
-    }
-
-    p.intro {
-      max-width: 650px;
-      margin: 0 auto 2.5rem auto;
-      font-size: 1.15rem;
-      color: #555;
-      text-align: center;
-    }
-
-    h2 {
-      color: #34495e;
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin-top: 3rem;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 0.25rem;
-      max-width: fit-content;
+      color: #34495e;
     }
 
-    ul {
-      list-style: inside disc;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 1.05rem;
+    section.about-me {
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      background-color: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section.about-me p {
+      font-size: 1.15rem;
       color: #444;
-      padding-left: 0;
+      margin-bottom: 1rem;
     }
 
-    ul li {
-      margin-bottom: 0.5rem;
+    section.about-me h2 {
+      margin-top: 2rem;
+      color: #2c3e50;
+    }
+
+    section.about-me ul.skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    section.about-me ul.skills li {
+      background-color: #e1ecf9;
+      padding: 0.4rem 0.8rem;
+      border-radius: 16px;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 3rem;
+      padding-bottom: 1rem;
     }
 
     /* Responsive */
@@ -105,6 +117,9 @@
       }
       body {
         padding: 1rem;
+      }
+      section.about-me {
+        padding: 1.5rem 1.75rem;
       }
     }
   </style>
@@ -122,22 +137,31 @@
 
   <h1>About Me</h1>
 
-  <p class="intro">
-    I'm Sarah Theriot, a passionate data science student with a background in sociology and journalism. 
-    My focus is on ethical, human-centered data work that blends strong technical skills with curiosity and creativity.
-  </p>
+  <section class="about-me" aria-label="About Sarah Theriot">
+    <p>
+      Hi! I’m Sarah Theriot, a passionate data science student dedicated to turning data into actionable insights that solve real-world problems. My journey into data science grew from a deep curiosity about patterns and stories hidden in numbers, and I enjoy exploring projects that combine analysis, visualization, and predictive modeling.
+    </p>
+    <p>
+      I’m especially interested in environmental and conservation data, sustainability analytics, and leveraging machine learning to support decision-making in those domains. Throughout my studies and projects, I’ve gained hands-on experience with Python, R, SQL, and data visualization tools, and I’m constantly learning new techniques to improve my craft.
+    </p>
+    <p>
+      I believe that clear communication and ethical data use are just as important as technical skills, so I focus on creating transparent, understandable, and responsible analyses. Take a look at my portfolio to see how I apply data science to impactful challenges, and feel free to reach out if you’d like to connect or collaborate!
+    </p>
 
-  <h2>Education</h2>
-  <ul>
-    <li><strong>Bellevue University</strong> – M.S. in Data Science (August 2025)</li>
-    <li><strong>Texas State University</strong> – B.A. in Sociology, Minor in Journalism (May 2021)</li>
-  </ul>
+    <h2>Skills</h2>
+    <ul class="skills" aria-label="List of technical skills">
+      <li>Python (Pandas, NumPy, scikit-learn)</li>
+      <li>R (tidyverse, ggplot2)</li>
+      <li>SQL and database management</li>
+      <li>Data visualization (matplotlib, seaborn, Power BI)</li>
+      <li>Machine Learning fundamentals</li>
+      <li>Ethical data practices and communication</li>
+    </ul>
+  </section>
 
-  <h2>Technical Skills</h2>
-  <ul>
-    <li><strong>Languages & Tools:</strong> SQL, Python, R, SPSS</li>
-    <li><strong>Visualization:</strong> Tableau, Power BI, Google Analytics</li>
-  </ul>
+  <footer>
+    &copy; 2025 Sarah Theriot
+  </footer>
 
 </body>
 </html>
