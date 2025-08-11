@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Sarah Theriot</title>
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f7fa;
@@ -20,15 +17,13 @@
       margin-right: auto;
       line-height: 1.6;
     }
-
     nav {
-      background-color: #ffffff;
+      background-color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 1rem 0;
       margin-bottom: 3rem;
       border-radius: 8px;
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -37,7 +32,6 @@
       padding: 0;
       margin: 0;
     }
-
     nav ul li a {
       text-decoration: none;
       color: #3498db;
@@ -47,14 +41,12 @@
       padding: 0.25rem 0.5rem;
       border-radius: 4px;
     }
-
     nav ul li a:hover,
     nav ul li a:focus {
       color: #1d6fa5;
       background-color: #e6f0fa;
       outline: none;
     }
-
     h1 {
       text-align: center;
       font-weight: 700;
@@ -62,7 +54,6 @@
       margin-bottom: 2rem;
       color: #34495e;
     }
-
     .project-preview {
       background-color: #fff;
       border-radius: 8px;
@@ -71,41 +62,33 @@
       margin-bottom: 2rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
     .project-preview:hover,
     .project-preview:focus-within {
       transform: translateY(-4px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
-
     .project-preview h2 {
       margin-top: 0;
-      color: #2c3e50;
       font-size: 1.6rem;
       margin-bottom: 0.5rem;
     }
-
-    .project-preview p {
-      color: #555;
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    .project-preview a {
+    .project-preview a.project-link {
       color: #3498db;
       font-weight: 600;
       text-decoration: none;
-      font-size: 1.05rem;
-      transition: color 0.3s ease;
+      font-size: 1.1rem;
     }
-
-    .project-preview a:hover,
-    .project-preview a:focus {
+    .project-preview a.project-link:hover,
+    .project-preview a.project-link:focus {
       color: #1d6fa5;
       text-decoration: underline;
       outline: none;
     }
-
+    .project-description {
+      color: #555;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
     /* Responsive */
     @media (max-width: 600px) {
       nav ul {
@@ -123,78 +106,66 @@
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html" aria-current="page">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html" aria-current="page">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <h1>Projects</h1>
+<h1>Projects</h1>
 
-  <div class="project-preview">
-    <h2>Netflix Churn Prediction</h2>
-    <p>Used logistic regression and EDA to identify key drivers of customer churn in a synthetic Netflix-style dataset. Includes white paper, presentation, and code.</p>
-    <a href="projects/netflix-churn.html" target="_blank" rel="noopener noreferrer">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/kia-hyundai-thefts" class="project-link" target="_blank" rel="noopener noreferrer">Kia & Hyundai Vehicle Thefts Infographic</a></h2>
+  <p class="project-description">An infographic presenting six visualizations that explain the surge in Kia and Hyundai vehicle thefts across the U.S.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Kia & Hyundai Theft Infographic</h2>
-    <p>Data visualization infographic analyzing vehicle theft trends for Kia and Hyundai models using R and Tableau. Highlights theft hotspots and trends.</p>
-    <a href="projects/kia-hyundai-theft.html" target="_blank" rel="noopener noreferrer">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/florida-wildlife-collisions" class="project-link" target="_blank" rel="noopener noreferrer">Protecting Wildlife on Florida’s Roads</a></h2>
+  <p class="project-description">A data-driven analysis identifying hotspots and patterns of wildlife-vehicle collisions in Florida’s state parks.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Climate Data Analysis</h2>
-    <p>Explored and modeled climate datasets to identify trends in temperature and precipitation with Python and Power BI.</p>
-    <a href="projects/climate-data-analysis.html" target="_blank" rel="noopener noreferrer">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/ocean-plastic-pollution" class="project-link" target="_blank" rel="noopener noreferrer">Predicting Future Impacts from Plastic Waste on Oceans</a></h2>
+  <p class="project-description">A predictive analytics project forecasting ocean plastic pollution trends to support environmental intervention.</p>
+</div>
 
-  <!-- Add more project blocks here up to 10 -->
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/mountain-gorillas-climate" class="project-link" target="_blank" rel="noopener noreferrer">The Impact of Climate Change on Mountain Gorillas</a></h2>
+  <p class="project-description">An analysis of climate effects on mountain gorilla behavior and habitat for conservation insights.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Project Title 4</h2>
-    <p>Brief description of the fourth project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/sea-turtle-nesting" class="project-link" target="_blank" rel="noopener noreferrer">Analyzing Climate Change Effects on Sea Turtle Nesting Patterns</a></h2>
+  <p class="project-description">A study exploring how temperature changes influence sea turtle nesting timing and success rates.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Project Title 5</h2>
-    <p>Brief description of the fifth project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/climate-trends-google" class="project-link" target="_blank" rel="noopener noreferrer">Public Interest in Climate Change – A Google Trends Analysis</a></h2>
+  <p class="project-description">An essay examining spikes in public interest in climate change through Google Trends data correlated with Earth Day.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Project Title 6</h2>
-    <p>Brief description of the sixth project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/chuck-norris-joke-fetcher" class="project-link" target="_blank" rel="noopener noreferrer">Chuck Norris Joke Fetcher</a></h2>
+  <p class="project-description">A Python program that fetches random Chuck Norris jokes from an API, demonstrating API use and JSON handling.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Project Title 7</h2>
-    <p>Brief description of the seventh project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/fiber-optics-calculator" class="project-link" target="_blank" rel="noopener noreferrer">Fiber Optics Store Cost Calculator</a></h2>
+  <p class="project-description">A calculator program that computes fiber optic installation costs based on cable length and pricing tiers.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Project Title 8</h2>
-    <p>Brief description of the eighth project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/gettysburg-address-dictionary" class="project-link" target="_blank" rel="noopener noreferrer">Gettysburg Address Dictionary</a></h2>
+  <p class="project-description">A script that analyzes the Gettysburg Address to count word frequencies using Python dictionaries.</p>
+</div>
 
-  <div class="project-preview">
-    <h2>Project Title 9</h2>
-    <p>Brief description of the ninth project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
-
-  <div class="project-preview">
-    <h2>Project Title 10</h2>
-    <p>Brief description of the tenth project goes here.</p>
-    <a href="#">View Project →</a>
-  </div>
+<div class="project-preview">
+  <h2><a href="https://github.com/yourusername/apple-sales-analysis" class="project-link" target="_blank" rel="noopener noreferrer">Understanding the Relationship Between Apple Product Sales and Services Revenue</a></h2>
+  <p class="project-description">An analysis of regional Apple product sales and their relationship to services revenue across U.S. states and global markets.</p>
+</div>
 
 </body>
 </html>
