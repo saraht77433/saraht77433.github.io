@@ -1,99 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Me - Sarah Theriot</title>
   <style>
+    /* Basic layout */
+    :root {
+      --primary: #3498db;
+      --primary-dark: #1d6fa5;
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --muted: #666;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7fa;
+      background: var(--bg);
       color: #2c3e50;
       margin: 0;
       padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
     }
 
+    /* Navigation */
     nav {
-      background-color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: var(--card);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       padding: 1rem 0;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       border-radius: 8px;
     }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; padding: 0; margin: 0; }
+    nav a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 1.05rem; padding: .25rem .5rem; border-radius: 4px; }
+    nav a:hover, nav a:focus { color: var(--primary-dark); background: #e6f0fa; outline: none; }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      padding: 0;
-      margin: 0;
+    h1 { text-align: center; font-size: 2.2rem; margin-bottom: .5rem; color: #34495e; }
+
+    /* Contact card */
+    .contact-card {
+      background: var(--card);
+      padding: 1.75rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    nav ul li a {
-      text-decoration: none;
-      color: #3498db;
-      font-weight: 600;
+    .contact-card p.lead {
+      margin: 0 0 1rem 0;
+      color: #444;
       font-size: 1.1rem;
-      transition: color 0.3s ease;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
     }
 
-    nav ul li a:hover,
-    nav ul li a:focus {
-      color: #1d6fa5;
-      background-color: #e6f0fa;
-      outline: none;
+    .contact-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .5rem;
+      margin: 1rem 0 1.5rem 0;
+      font-size: 1rem;
+      color: #333;
     }
 
-    h1 {
-      text-align: center;
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
+    .contact-list a { color: var(--primary); font-weight: 600; text-decoration: none; }
+    .contact-list a:hover, .contact-list a:focus { color: var(--primary-dark); text-decoration: underline; }
 
-    .contact-info {
-      text-align: center;
-      font-size: 1.15rem;
-    }
-
-    .contact-info p {
-      margin: 0.5rem 0;
-    }
-
-    .contact-info a {
-      color: #3498db;
+    /* LinkedIn button */
+    .linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #0a66c2;
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(10,102,194,0.12);
+      border: 0;
+      transition: transform 0.08s ease, box-shadow 0.12s ease;
     }
 
-    .contact-info a:hover {
-      color: #1d6fa5;
-      text-decoration: underline;
-    }
+    .linkedin-btn svg { width: 20px; height: 20px; display: block; fill: #fff; }
+    .linkedin-btn:hover, .linkedin-btn:focus { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(10,102,194,0.16); outline: none; }
+    .linkedin-btn:active { transform: translateY(0); }
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      margin-top: 3rem;
-      padding-bottom: 1rem;
-    }
+    footer { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 2rem; }
 
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      body {
-        padding: 1rem;
-      }
+    @media (max-width: 520px) {
+      .linkedin-btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -110,10 +112,27 @@
 
   <h1>Contact Me</h1>
 
-  <div class="contact-info">
-    <p>I'd love to connect! You can reach me via email or LinkedIn:</p>
-    <p>Email: <a href="mailto:sarahtheriot@example.com">sarahtheriot@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sarahtheriot" target="_blank">www.linkedin.com/in/sarahtheriot</a></p>
+  <div class="contact-card" role="region" aria-labelledby="contact-heading">
+    <p id="contact-heading" class="lead">I'd love to connect. Here are the best ways to reach me:</p>
+
+    <div class="contact-list" aria-label="Contact information">
+      <div>Email: <a href="mailto:thesarahtheriot@gmail.com">thesarahtheriot@gmail.com</a></div>
+      <div>Phone: <a href="tel:+2819790349">281-979-0349</a></div>
+    </div>
+
+    <!-- LinkedIn button with inline SVG logo -->
+    <a class="linkedin-btn"
+       href="https://www.linkedin.com/in/sarahtheriot"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Open Sarah Theriot LinkedIn profile">
+      <!-- LinkedIn glyph (SVG) -->
+      <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <rect width="34" height="34" rx="6" ry="6" fill="#0A66C2"></rect>
+        <path d="M10.6 13.1h3.5V25h-3.5zM12.3 11.2a2 2 0 110-3.999 2 2 0 010 3.999zM15.5 13.1h3.35v1.6h.05c.47-.89 1.62-1.82 3.34-1.82 3.57 0 4.23 2.35 4.23 5.41V25H24v-5.82c0-1.39 0-3.18-1.94-3.18-1.94 0-2.24 1.52-2.24 3.07V25h-3.5z" fill="#fff"/>
+      </svg>
+      Connect on LinkedIn
+    </a>
   </div>
 
   <footer>
