@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarah Theriot Portfolio</title>
   <style>
-    /* Reset and box-sizing */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -20,6 +19,7 @@
       margin-left: auto;
       margin-right: auto;
       line-height: 1.6;
+      text-align: center;
     }
 
     nav {
@@ -57,54 +57,33 @@
     }
 
     h1 {
-      text-align: center;
       font-weight: 700;
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
       color: #34495e;
     }
 
-    section.about-me {
+    p.lead {
+      font-size: 1.3rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    p.note {
+      font-style: italic;
+      color: #777;
       max-width: 700px;
       margin: 0 auto 3rem auto;
-      background-color: #fff;
-      padding: 2rem 2.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    section.about-me p {
-      font-size: 1.15rem;
-      color: #444;
-      margin-bottom: 1rem;
-    }
-
-    section.about-me ul.skills {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1.5rem;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    section.about-me ul.skills li {
-      background-color: #e1ecf9;
-      padding: 0.4rem 0.8rem;
-      border-radius: 16px;
-      font-size: 1rem;
     }
 
     footer {
-      text-align: center;
       font-size: 0.9rem;
       color: #888;
       margin-top: 3rem;
       padding-bottom: 1rem;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
@@ -112,9 +91,6 @@
       }
       body {
         padding: 1rem;
-      }
-      section.about-me {
-        padding: 1.5rem 1.75rem;
       }
     }
   </style>
@@ -130,22 +106,20 @@
     </ul>
   </nav>
 
-  <h1>About Me</h1>
+  <h1>Welcome to My Data Science Portfolio</h1>
 
-  <section class="about-me" aria-label="About Sarah Theriot">
-    <p>
-      Hi! I’m Sarah Theriot, a passionate data science student dedicated to turning data into actionable insights that solve real-world problems. My journey into data science grew from a deep curiosity about patterns and stories hidden in numbers, and I enjoy exploring projects that combine analysis, visualization, and predictive modeling.
-    </p>
-    <p>
-      I’m especially interested in environmental and conservation data, sustainability analytics, and leveraging machine learning to support decision-making in those domains. Throughout my studies and projects, I’ve gained hands-on experience with Python, R, SQL, and data visualization tools, and I’m constantly learning new techniques to improve my craft.
-    </p>
-    <p>
-      I believe that clear communication and ethical data use are just as important as technical skills, so I focus on creating transparent, understandable, and responsible analyses. Take a look at my portfolio to see how I apply data science to impactful challenges, and feel free to reach out if you’d like to connect or collaborate!
-    </p>
+  <p class="lead">
+    Hello, I’m Sarah Theriot. I’m a data science student focused on turning data into clear, actionable insights.  
+    This portfolio highlights my projects, skills, and learning journey in data science.
+  </p>
 
-    <h2>Skills</h2>
-    <ul class="skills" aria-label="List of technical skills">
-      <li>Python (Pandas, NumPy, scikit-learn)</li>
-      <li>R (tidyverse, ggplot2)</li>
-      <li>SQL and database management</li>
-      <li>Data visualization (matplotlib, seaborn, Power B
+  <p class="note">
+    This portfolio is a work in progress. More projects and updates will be added soon.
+  </p>
+
+  <footer>
+    &copy; 2025 Sarah Theriot
+  </footer>
+
+</body>
+</html>
